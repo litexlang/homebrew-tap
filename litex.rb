@@ -7,7 +7,7 @@ class Litex < Formula
   version "0.1.5-beta"
 
   def install
-    bin.install "macos_64_litex_0_1_5_beta" => "litex"
+    bin.install "macos_64_litex_0.1.5-beta" => "litex"
   end
 
   test do
