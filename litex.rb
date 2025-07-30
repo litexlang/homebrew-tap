@@ -1,13 +1,13 @@
 class Litex < Formula
   desc "Litex: an intuitive and scalable formal language"
   homepage "https://litexlang.org"
-  url "https://github.com/litexlang/golitex/releases/download/v0.1.5-beta/macos_64_litex_0.1.5-beta"
-  sha256 "70a32ee5a3932ee67df3d2170f69c0bcc222c2a4ebc1223e5ae637e37f780b33"
+  url "https://github.com/litexlang/golitex/releases/download/latest/litex_0.1.6-beta_darwin_amd64.tar.gz"
+  sha256 "f76cd915580a02cf264bb6addf922dc924a4da46db2e68cae52d842080d4c182"
   license "Apache-2.0"
-  version "0.1.5-beta"
+  version "0.1.6-beta"
 
   def install
-    bin.install "macos_64_litex_0.1.5-beta" => "litex"
+    bin.install "litex_0.1.6-beta_darwin_amd64.tar.gz" => "litex"
   end
 
   test do
