@@ -2,7 +2,7 @@ class Litex < Formula
   desc "Litex: an intuitive and scalable formal language"
   homepage "https://litexlang.org"
   url "https://github.com/litexlang/golitex/releases/download/0.1.11-beta/litex_0.1.11-beta_darwin_amd64"
-  sha256 "83a1dea33c0dff456f7dc939fbeccc021ed658bec859568224ec7b07e9b8c353"
+  sha256 "5c526e4bb020a56fdfe98c28275e55cbb6fb027d5e612446b636e04ccde6f53f"
   license "Apache-2.0"
   version "0.1.11-beta"
 
