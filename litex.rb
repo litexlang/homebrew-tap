@@ -1,21 +1,21 @@
 class Litex < Formula
   desc "A simple formal proof language and verifier"
   homepage "https://litexlang.com"
-  version "0.9.66-beta"
+  version "0.9.68-beta"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/litexlang/golitex/releases/download/0.9.66-beta/litex_0.9.66-beta_darwin_arm64"
-    sha256 "1b811cfdb69c7138e9a2ffdd2219bfcfdd523c0532e44ccada57f87d273b3c55"
+    url "https://github.com/litexlang/golitex/releases/download/0.9.68-beta/litex_0.9.68-beta_darwin_arm64"
+    sha256 "b61efc8ebe55e5c65c22ed148e4e21539ad2625accf30180c8d7daf093299e02"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/litexlang/golitex/releases/download/0.9.66-beta/litex_0.9.66-beta_linux_arm64"
-      sha256 "2f8df7290dacb4b40189a04c6e3796a1f851f803e2487a00b2f6f26983f4ae9d"
+      url "https://github.com/litexlang/golitex/releases/download/0.9.68-beta/litex_0.9.68-beta_linux_arm64"
+      sha256 "dd38b5555cb6caff5bdcae38ae7c7f01ed4cd29dd95b797eea4242a9e64af4ef"
     else
-      url "https://github.com/litexlang/golitex/releases/download/0.9.66-beta/litex_0.9.66-beta_linux_amd64"
-      sha256 "a713a21acdbcdb32be710e2e7dbd80ce6561a7c52fda2224e6bdd4789b20a839"
+      url "https://github.com/litexlang/golitex/releases/download/0.9.68-beta/litex_0.9.68-beta_linux_amd64"
+      sha256 "f503228f17906db641d78958b9a17e5e2e354322945f1fc1bae12bd845dffa37"
     end
   end
 
@@ -24,6 +24,6 @@ class Litex < Formula
   end
 
   test do
-    assert_match "litex 0.9.66-beta", shell_output("#{bin}/litex -version")
+    assert_match "litex 0.9.68-beta", shell_output("#{bin}/litex -version")
   end
 end
