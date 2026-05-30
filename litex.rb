@@ -1,21 +1,21 @@
 class Litex < Formula
   desc "A simple formal proof language and verifier"
   homepage "https://litexlang.com"
-  version "0.9.91-beta"
+  version "0.9.94-beta"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/litexlang/golitex/releases/download/0.9.91-beta/litex_0.9.91-beta_darwin_arm64.tar.gz"
-    sha256 "b14ff579293f5d78635f938d452ce8b195108069a5382f61fbb7b9a2502ae6fc"
+    url "https://github.com/litexlang/golitex/releases/download/0.9.94-beta/litex_0.9.94-beta_darwin_arm64.tar.gz"
+    sha256 "9e2120221345decdb9afe64b86cc29ee6e9e1ec76bea6196cf1b05792b9b189f"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/litexlang/golitex/releases/download/0.9.91-beta/litex_0.9.91-beta_linux_arm64.tar.gz"
-      sha256 "770b411a94f58238dd714403d2898648f382af4d8fc58fe2fe5c9e1d0d636a81"
+      url "https://github.com/litexlang/golitex/releases/download/0.9.94-beta/litex_0.9.94-beta_linux_arm64.tar.gz"
+      sha256 "e766c60cb4ad581d3cfa64763f5f33b974b6364facb5794ddd3e16c2e9bbddc3"
     else
-      url "https://github.com/litexlang/golitex/releases/download/0.9.91-beta/litex_0.9.91-beta_linux_amd64.tar.gz"
-      sha256 "bc797ab023b80dfcfd7469cf89885baed9f9cd2fef0b925a59fc6f4695c60fc0"
+      url "https://github.com/litexlang/golitex/releases/download/0.9.94-beta/litex_0.9.94-beta_linux_amd64.tar.gz"
+      sha256 "250b7afef551119736ecc2991d7d882904ba2c5c4c16e21e86244313b857ea68"
     end
   end
 
@@ -25,8 +25,10 @@ class Litex < Formula
   end
 
   test do
-    assert_match "litex 0.9.91-beta", shell_output("#{bin}/litex -version")
-    (testpath/"test.lit").write "run_file trigonometry\nsin(0) = 0\n"
-    assert_match "sin(0) = 0", shell_output("#{bin}/litex -f #{testpath}/test.lit")
+    assert_match "litex 0.9.94-beta", shell_output("#{bin}/litex -version")
+    (testpath/"test.lit").write "import Trig\nTrig::sin(0) = 0\n"
+    output = shell_output("#{bin}/litex -f #{testpath}/test.lit")
+    assert_match "Trig::sin(0) = 0", output
+    refute_match '"result": "error"', output
   end
 end
