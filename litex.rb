@@ -6,16 +6,16 @@ class Litex < Formula
 
   on_macos do
     url "https://github.com/litexlang/golitex/releases/download/0.9.106-beta/litex_0.9.106-beta_darwin_arm64.tar.gz"
-    sha256 "a66d9e794b530601f8e7a29baf5fdff2e11639f9bfa0f243a9d8fb37555417a1"
+    sha256 "2e2f37dca048365026610624e758c471457aa3f75a979ad7c0ab1ea447e57a5c"
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/litexlang/golitex/releases/download/0.9.106-beta/litex_0.9.106-beta_linux_arm64.tar.gz"
-      sha256 "b14ec603effc1833cb6a4684c87900f64cf8c4f9d3a1efddfec8b92203af3e51"
+      sha256 "b2798168f56e26a5ed6877158168e2b887c830675362b7ce7adea3b93ceeb5ac"
     else
       url "https://github.com/litexlang/golitex/releases/download/0.9.106-beta/litex_0.9.106-beta_linux_amd64.tar.gz"
-      sha256 "a64a6b4c73051c18e52a1307303db1c48384055c112a22e2e2b52c15617940f1"
+      sha256 "263b2f49d2212804de686e1479c75503c856b1fdb91277f541cea37849929a25"
     end
   end
 
