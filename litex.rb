@@ -3,21 +3,21 @@ require "json"
 class Litex < Formula
   desc "A simple formal proof language and verifier"
   homepage "https://litexlang.com"
-  version "1.1.5-beta"
+  version "1.1.10-beta"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/litexlang/golitex/releases/download/1.1.5-beta/litex_1.1.5-beta_darwin_arm64.tar.gz"
-    sha256 "7e9c712fe494caee5f49e96b1115f61911cd9975ddbcb2ef958bf6a34149033d"
+    url "https://github.com/litexlang/golitex/releases/download/1.1.10-beta/litex_1.1.10-beta_darwin_arm64.tar.gz"
+    sha256 "a97c7363dff0dde21894e10d6143c24ddf2d7487735bffafd23afbcf272601ad"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/litexlang/golitex/releases/download/1.1.5-beta/litex_1.1.5-beta_linux_arm64.tar.gz"
-      sha256 "610ee30f1b305b4e97daeef91373ca58c6252fd7b3990f77e593b36d97cbaa27"
+      url "https://github.com/litexlang/golitex/releases/download/1.1.10-beta/litex_1.1.10-beta_linux_arm64.tar.gz"
+      sha256 "f4995883b9afdc6dca1f6c9bbdf61b5184c27e43f321e9ab65677a8dc46c9256"
     else
-      url "https://github.com/litexlang/golitex/releases/download/1.1.5-beta/litex_1.1.5-beta_linux_amd64.tar.gz"
-      sha256 "30038e7f715170a620cb2f1e63c1807464bc7f21c39cbfedcbaa98d147c15212"
+      url "https://github.com/litexlang/golitex/releases/download/1.1.10-beta/litex_1.1.10-beta_linux_amd64.tar.gz"
+      sha256 "26344b03a59a9c6de364ec97691aef6b5bc16cd10cd5f1759b44829b0f88447d"
     end
   end
 
